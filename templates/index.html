@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDS</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>    
+    <script src="https://cdn.anychart.com/js/8.0.1/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/js/8.0.1/anychart-pie.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/styles.css') }}">
+    <script src="{{ url_for('static', filename = 'js/script.js') }}" defer></script>
+</head>
+<body>
+    <h1 class="heading">Dashboard</h1>
+    <div class="dashboard">
+        <div class="left_container">            
+            <img id="chair" src="{{ url_for('static', filename = 'img/chair.svg') }}" alt="">
+            <div id="sensor_1" class="sensor_point"></div>
+            <div id="sensor_2" class="sensor_point"></div>
+            <div id="sensor_3" class="sensor_point"></div>
+            <div id="sensor_4" class="sensor_point"></div>    
+            <div class="status">                
+                <div id="status_value">INACTIVE</div>
+            </div>                   
+        </div>
+        <div class="right_container">
+            <div class="history_section">
+                <div class="history_header">
+                    <div class="history_title">
+                        <img class="history_icon" src="{{ url_for('static', filename = 'img/history_icon.svg') }}" alt="" srcset="">
+                        <p class="history_title">History</p>
+                    </div>
+                    <div class="history_table_header">
+                        <div class="history_time_header">Time</div>
+                        <div class="history_slouch_header">Slouched Count</div>
+                        <div class="history_proper_header">Proper Count</div>
+                    </div>
+                </div>
+                <div class="history_data" id="history_data">
+                </div>
+            </div>
+            <div class="chart_section">
+                <div class="chart_header">
+                    <img class="chart_icon" src="{{ url_for('static', filename = 'img/pie_chart.svg') }}" alt="">
+                    <p class="chart_heading">Daily Slouch</p>
+                </div>
+                <div id="chart_container"></div>
+            </div>
+        </div>        
+    </div>    
+</body>
+</html>

@@ -1,0 +1,272 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100vh;
+}
+body{
+    overflow: hidden;
+    height: 100%;
+    background: #36D1DC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Heading */
+.heading{
+    font-size: 3.5em;
+    text-align: center;
+    background: rgba( 255, 255, 255, 0.2 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 7.5px );
+    -webkit-backdrop-filter: blur( 7.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 5px 2px;
+    width: 85%;
+    margin: 20px auto;
+    text-transform: uppercase;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 10px;
+}
+
+/* Dashboard */
+.dashboard{
+    display: flex;
+    /* height: 100vh; */
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: start;
+}
+
+/* Dashboard - Left Panel - Chair Section */
+.left_container{
+    position: relative;
+    width: 550px;
+    height: 630px;
+    /* margin: 0 100px; */
+    background: rgba( 255, 255, 255, 0.2 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 7.5px );
+    -webkit-backdrop-filter: blur( 7.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    margin-left: 100px;
+}
+
+.sensor_point {
+    position: absolute;
+    width: 20px;
+    height: 12px;
+    border-radius: 40%;
+    z-index: 100;
+}
+
+
+#sensor_1 {
+    background-color: rgb(255,0,0);
+    left: 210px;
+    top: 80px;
+}
+
+#sensor_2 {
+    background-color: rgb(255,0,0);
+    right: 205px;
+    top: 80px;
+}
+
+#sensor_3 {
+    background-color: rgb(255,0,0);
+    top: 180px;
+    left: 230px;
+}
+
+#sensor_4 {
+    background-color: rgb(255,0,0);
+    top: 180px;
+    right: 225px;
+}
+
+.status{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+#status_value{
+    width: 300px;
+    height: 48px;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #7afe87;
+    border-radius: 12px;
+    font-size: 1.4em;
+    box-shadow: -4px 5px 5px 0 rgba( 31, 38, 135, 0.37 );
+    
+}
+
+/* Dashboard - Right Panel */
+/* Dashboard - Right Panel Top - History Section */
+.right_container{
+    margin-left: -60px;
+}
+
+.history_section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 640px;
+    height: 250px;
+    margin: 0 100px;
+    right: 0;
+    top: 15%;
+    background: rgba( 255, 255, 255, 0.2 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 7.5px );
+    -webkit-backdrop-filter: blur( 7.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+
+.history_header {
+    width: 100%;
+    height: 78px;
+    background: rgba( 255, 255, 255, 0.2 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 7.5px );
+    -webkit-backdrop-filter: blur( 7.5px );
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.history_title {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4em;
+    margin-left: 10px;
+    color: #2F343F;
+    text-transform: uppercase;
+}
+
+.history_icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.history_table_header{
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2em;
+    margin-top: 4px;
+    color: #2F343F;
+}
+
+
+.time {
+    /* position: absolute;
+    /* width: 27px;
+    height: 21px;
+    left: 30px;
+    top: 100px; */
+}
+
+.history_slouch_header {
+    margin-left: 50px;
+}
+
+.history_data{
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.history_data_elem{
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.4em;
+    margin: 10px 0;
+}
+
+.time{
+    margin-left: -80px;
+}
+
+.slouch_count {
+    margin-left: -50px;
+}
+
+/* Dashboard - Right Panel Bottom - Chart Section */
+.chart_section{
+    width: 640px;
+    height:350px;
+    margin: 30px 100px;
+    background: rgba( 255, 255, 255, 0.2 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 7.5px );
+    -webkit-backdrop-filter: blur( 7.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+
+.chart_header {
+    width: 100%;
+    height: 60px;
+    border-radius: 10px 0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba( 255, 255, 255, 0.2 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 7.5px );
+    -webkit-backdrop-filter: blur( 7.5px );
+}
+
+.chart_icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;    
+}
+
+
+.chart_heading {
+    font-size: 1.5em;
+    color: #2F343F;
+    text-transform: uppercase;
+    margin-left: 10px;
+}
+
+
+#chart_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.anychart-ui-support{
+    height:300px;
+    border-radius: 10px;
+}
+
+.anychart-credits-text{
+    display: none;
+}
+
+.anychart-credits-logo{
+    display: none;
+}
